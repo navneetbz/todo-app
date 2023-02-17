@@ -11,7 +11,7 @@ app.use(express.json());
 const port = 3000;
 
 mongoose.set("strictQuery", true);
-mongoose.connect(process.env.MONGO_CONNECTION_STRING, {}, function (err) {
+mongoose.connect(process.env.MONGO_CONNECTION_STRING_TODO, {}, function (err) {
     // we are tring to connect if cannot error
     if (err) {
         console.error(err);

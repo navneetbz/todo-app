@@ -115,10 +115,7 @@ async function getAllTodos() {
         todoCount = todos.data.length;
         document.getElementById("todoCount").innerHTML = todoCount
         todos.data.forEach((el, index) => {
-        //     <li class="list-group-item">
-        //     <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-        //     <label class="form-check-label" for="firstCheckbox">First checkbox</label>
-        //   </li>
+       
             let listItem = document.createElement("li");
             let labelItem = document.createElement("label");
             let inputItem = document.createElement("input");
