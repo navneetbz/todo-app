@@ -57,6 +57,8 @@ async function createTodo(text) {
         getAllTodos();
     } catch (err) {
         console.log(err);
+    } finally {
+        inputBox.value = "";
     }
 }
 
