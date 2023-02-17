@@ -6,10 +6,24 @@ let todoCount = 0;
 let completedCount = 0;
 let deletedCount = 0;
 
-document.addEventListener("DOMContentLoaded", () => {
-    getAllTodos();
-    getAllCompletedTodos();
-    getAllDeletedTodos();
+const loader = document.getElementById("loader")
+loader.style.display = "none"
+
+document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        loader.style.display = "block"
+        await Promise.all([
+            getAllTodos(),
+            getAllCompletedTodos(),
+            getAllDeletedTodos(),
+        ]);
+       
+    } catch (err) {
+        console.log(err);
+        
+    } finally {
+        loader.style.display = "none"
+    }
 })
 const inputBox = document.getElementById("inputBox");
 

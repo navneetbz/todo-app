@@ -72,9 +72,15 @@
                     type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onclick="getAllDeletedTodos()">Deleted <span id="deletedCount" class="badge text-bg-success">0</span></button>
             </li>
         </ul>
+        <div id="loader" class="text-center mt-5">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
                 tabindex="0">
+                
                 <ul id="todoList" class="list-group">
 
                 </ul>
